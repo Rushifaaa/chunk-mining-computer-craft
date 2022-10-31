@@ -15,7 +15,7 @@ local function refuel()
             print("Waiting 2 Seconds...")
             sleep(2)
         end
-    until turtle.getFuelLevel > 200
+    until turtle.getFuelLevel() > 200
 end
 
 local function placeChest()
@@ -70,7 +70,7 @@ if not string.find(metadata.name, "chest") then
                     placeChest()
                 end
             end
-            
+
             turtle.forward()
             turtle.turnRight()
 
